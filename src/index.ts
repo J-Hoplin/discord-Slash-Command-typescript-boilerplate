@@ -14,14 +14,6 @@ import { ready, interactionCreate } from "./events"
 import logger from './log'
 import { } from './commands'
 
-
-/**
- * Deploy require $PATH variable.
- * 
- * In this project, use 'dotenv' for ENV variable. require to dotenv configuration before
- */
-import { deploy } from './deploy'
-
 const client: Discord.DiscordCustomClient = new Discord.DiscordCustomClient({
     intents: [
         GatewayIntentBits.Guilds,
@@ -30,9 +22,6 @@ const client: Discord.DiscordCustomClient = new Discord.DiscordCustomClient({
         GatewayIntentBits.GuildMessages
     ]
 });
-
-// Deploy command route
-(async () => await deploy(client))()
 
 client.once(Events.ClientReady, info => {
     logger.info(`I'm ready! Logged in as ${info.user.tag}`)
