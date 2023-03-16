@@ -12,6 +12,7 @@ import * as Discord from './classes'
 import { Events, GatewayIntentBits, Collection, CommandInteraction, Interaction, ActivityType } from 'discord.js'
 import { ready, interactionCreate } from "./events"
 import logger from './log'
+import { } from './commands'
 
 
 /**
