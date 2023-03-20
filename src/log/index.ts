@@ -37,7 +37,7 @@ const logger: Levels = <Levels>createLogger({
     levels: options.levels,
     format: format.combine(
         format.label({
-            label: '[Chat-GPT Command]'
+            label: `[${process.env.LOG_LABEL}]`
         }),
         format.timestamp({
             format: 'YYYY-MM-DD HH:mm:ss'

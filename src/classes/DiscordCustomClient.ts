@@ -22,7 +22,7 @@ class DiscordCustomClient extends Discord.Client {
         };
         // Deploy command route
         (async () => await deploy(this))()
-
+        
     }
 }
 

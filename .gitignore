@@ -4,3 +4,4 @@ logfile
 dist/
 tsinit
 logs/
+.DS_Store
