@@ -14,6 +14,10 @@ import { ready, interactionCreate } from "./events"
 import logger from './log'
 import { } from './commands'
 
+
+// Enroll Command like this
+import { exampleCommand } from './commands'
+
 const client: Discord.DiscordCustomClient = new Discord.DiscordCustomClient({
     intents: [
         GatewayIntentBits.Guilds,
@@ -21,6 +25,8 @@ const client: Discord.DiscordCustomClient = new Discord.DiscordCustomClient({
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessages
     ]
+}, {
+    commands: [exampleCommand]
 });
 
 client.once(Events.ClientReady, info => {
