@@ -11,5 +11,5 @@ import logger from "../../log/index";
 
 export const exampleCommand: Command = {
   data: new SlashCommandBuilder(),
-  run: async () => { }
+  run: async (client: DiscordCustomClient, interaction: CommandInteraction) => { }
 }
